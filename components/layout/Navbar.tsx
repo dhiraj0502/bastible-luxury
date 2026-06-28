@@ -35,7 +35,7 @@ export default function Navbar() {
             href="/"
             className="font-[var(--font-playfair)] text-4xl tracking-tight"
           >
-            Loose Canon
+            Bastible
           </Link>
 
           <nav className="hidden md:flex items-center gap-10 uppercase tracking-[0.3em] text-xs text-white/80">
