@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --bg:#0F0F0F;
+  --surface:#181818;
+  --cream:#F6F3EE;
+  --stone:#D8D2C8;
+  --copper:#A87652;
+  --muted:#9C9C9C;
+
+  --radius:32px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html{
+  scroll-behavior:smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body{
+  background:var(--bg);
+  color:var(--cream);
+  overflow-x:hidden;
+  font-family:var(--font-manrope);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.container{
+  max-width:1280px;
+  margin:auto;
+  padding-inline:32px;
+}
+
+.section{
+  padding:140px 0;
+}
+
+.display-xl{
+  font-family:var(--font-playfair);
+  font-size:clamp(4rem,7vw,7rem);
+  line-height:.9;
+  letter-spacing:-0.05em;
+}
+
+.display-lg{
+  font-family:var(--font-playfair);
+  font-size:clamp(2.5rem,5vw,5rem);
+  line-height:1;
+}
+
+.eyebrow{
+  color:var(--copper);
+  text-transform:uppercase;
+  letter-spacing:.45em;
+  font-size:.8rem;
+}
+
+.button-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px 36px;
+
+  border-radius:9999px;
+
+  background:var(--cream);
+
+  color:black;
+
+  transition:.35s;
+}
+
+.button-primary:hover{
+  transform:translateY(-3px);
 }
