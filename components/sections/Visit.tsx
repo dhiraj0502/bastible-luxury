@@ -1,14 +1,16 @@
 "use client";
 
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, ExternalLink } from "lucide-react";
+import LuxuryButton from "@/components/ui/LuxuryButton";
 
 export default function Visit() {
   return (
-    <section className="section bg-[#111111]">
-
+    <section id="visit" className="section bg-[var(--cream)] text-black">
       <div className="container">
 
-        <div className="grid lg:grid-cols-2 gap-20">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+          {/* Left */}
 
           <div>
 
@@ -17,31 +19,53 @@ export default function Visit() {
             </p>
 
             <h2 className="display-lg mt-8">
-              Join Us
+              Walk In.
               <br />
-              In Dublin
+              Stay Awhile.
             </h2>
+
+            <p className="mt-10 max-w-lg text-lg leading-9 text-black/70">
+              No reservations. Just great wine,
+              Irish cheese, toasties and good
+              conversation in the heart of Dublin.
+            </p>
+
+            <a
+              href="https://maps.google.com/?q=Loose+Canon+Cheese+and+Wine+Dublin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-12"
+            >
+              <LuxuryButton dark>
+                View on Google Maps
+              </LuxuryButton>
+            </a>
 
           </div>
 
-          <div className="space-y-10">
+          {/* Right */}
+
+          <div className="space-y-12">
 
             <div className="flex gap-5">
 
-              <MapPin className="mt-1 text-[#A87652]" />
+              <MapPin
+                size={26}
+                className="text-[var(--wine)] mt-1"
+              />
 
               <div>
 
-                <h3 className="text-xl">
+                <h3 className="text-xl font-semibold">
                   Address
                 </h3>
 
-                <p className="mt-3 text-white/70">
-                  Leonard's Corner Bar
+                <p className="mt-3 text-black/70 leading-8">
+                  George's Street Arcade
                   <br />
-                  111 South Circular Road
+                  29 Drury Street
                   <br />
-                  Dublin D08 RW2K
+                  Dublin D02 RX95
                 </p>
 
               </div>
@@ -50,18 +74,48 @@ export default function Visit() {
 
             <div className="flex gap-5">
 
-              <Clock className="mt-1 text-[#A87652]" />
+              <Clock
+                size={26}
+                className="text-[var(--wine)] mt-1"
+              />
 
               <div>
 
-                <h3 className="text-xl">
+                <h3 className="text-xl font-semibold">
                   Opening Hours
                 </h3>
 
-                <p className="mt-3 text-white/70">
-                  Wednesday – Saturday
+                <p className="mt-3 text-black/70 leading-8">
+                  Monday – Sunday
                   <br />
-                  5:30 PM onwards
+                  Open Daily
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="flex gap-5">
+
+              <ExternalLink
+                size={26}
+                className="text-[var(--wine)] mt-1"
+              />
+
+              <div>
+
+                <h3 className="text-xl font-semibold">
+                  Good to Know
+                </h3>
+
+                <p className="mt-3 text-black/70 leading-8">
+                  Walk-ins only.
+                  <br />
+                  Wines available by the glass
+                  or bottle.
+                  <br />
+                  Irish cheese, charcuterie
+                  and toasties served daily.
                 </p>
 
               </div>
@@ -73,7 +127,6 @@ export default function Visit() {
         </div>
 
       </div>
-
     </section>
   );
 }

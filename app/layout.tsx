@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-playfair",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -15,9 +16,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Bastible | Seasonal Irish Dining",
+  title: "Loose Canon | Natural Wine & Irish Cheese",
   description:
-    "A concept redesign showcasing a luxury digital experience for Bastible, inspired by contemporary Irish dining and editorial design.",
+    "Concept redesign for Loose Canon, Dublin's independent natural wine bar and Irish cheese shop.",
   keywords: [
     "Bastible",
     "Irish Restaurant",
@@ -51,8 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${manrope.variable} antialiased bg-[#0F0F0F] text-[#F6F3EE]`}
-      >
+className={`${cormorant.variable} ${manrope.variable}`}
+>
         {children}
       </body>
     </html>

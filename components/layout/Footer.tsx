@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
 
             <h2 className="font-[var(--font-playfair)] text-4xl">
-              Bastible
+              Loose Canon
             </h2>
 
             <p className="mt-6 max-w-md text-white/60 leading-8">
@@ -52,7 +52,7 @@ export default function Footer() {
           </p>
 
           <p>
-            This is an independent design concept and is not affiliated with Bastible.
+            This is an independent design concept and is not affiliated with Loose Cannon.
           </p>
 
         </div>

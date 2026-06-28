@@ -1,34 +1,34 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Experience from "@/components/sections/Experience";
-import Ingredients from "@/components/sections/Ingredients";
-import FireCooking from "@/components/sections/FireCooking";
-import MenuPreview from "@/components/sections/MenuPreview";
-import Reservation from "@/components/sections/Reservation";
+import WineSelection from "@/components/sections/WineSelection";
+import CheeseCounter from "@/components/sections/CheeseCounter";
+import TheSpace from "@/components/sections/TheSpace";
+import Toasties from "@/components/sections/Toasties";
+import WineStyles from "@/components/sections/WineStyles";
 import Visit from "@/components/sections/Visit";
-import MapSection from "@/components/sections/Map";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#111111] text-[#F6F3EE]">
+    <main className="bg-[var(--bg)] text-[var(--cream)] overflow-x-hidden">
       <Navbar />
 
       <Hero />
 
       <Experience />
 
-      <Ingredients />
+      <WineSelection />
 
-      <FireCooking />
+      <CheeseCounter />
 
-      <MenuPreview />
+      <TheSpace />
 
-      <Reservation />
+      <Toasties />
+
+      <WineStyles />
 
       <Visit />
-
-      <MapSection />
 
       <Footer />
     </main>

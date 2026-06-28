@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 :root{
-  --bg:#0F0F0F;
-  --surface:#181818;
-  --cream:#F6F3EE;
-  --stone:#D8D2C8;
-  --copper:#A87652;
-  --muted:#9C9C9C;
+  --bg:#181310;
+  --surface:#221A16;
+
+  --cream:#F5F0E8;
+
+  --wine:#5E2F34;
+
+  --olive:#59634A;
+
+  --oak:#8B6542;
+
+  --muted:#B8ACA0;
 
   --radius:32px;
 }

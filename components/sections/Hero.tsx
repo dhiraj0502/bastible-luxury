@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import LuxuryButton from "@/components/ui/LuxuryButton";
 
 export default function Hero() {
   return (
@@ -9,60 +10,72 @@ export default function Hero() {
       {/* Background */}
 
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2200&q=80')",
+            "url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=2200&q=80')",
         }}
       />
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
 
       {/* Content */}
 
       <div className="container relative z-10 flex h-full items-center">
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 60,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="max-w-3xl"
-        >
-          <p className="eyebrow">
-            Dublin · Ireland
-          </p>
+        <div className="max-w-3xl">
 
-          <h1 className="display-xl mt-6">
-            Seasonal
+          <motion.p
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="eyebrow"
+          >
+            DUBLIN • GEORGE'S STREET ARCADE
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="display-xl mt-8"
+          >
+            Natural Wine.
             <br />
-            Irish Dining
-          </h1>
+            Irish Cheese.
+            <br />
+            Good Company.
+          </motion.h1>
 
-          <p className="mt-10 max-w-xl text-lg text-white/70 leading-8">
-            Quietly refined.
-            Thoughtfully sourced.
-            Inspired by the rhythm of Irish seasons.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.8 }}
+            className="mt-10 max-w-xl text-lg leading-9 text-white/75"
+          >
+            Low-intervention wines, Irish cheese,
+            toasties and conversation in the heart
+            of Dublin.
+          </motion.p>
 
-          <button className="button-primary mt-12">
-            Reserve a Table
-          </button>
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="mt-12"
+          >
+            <LuxuryButton>
+              Walk In Today
+            </LuxuryButton>
+          </motion.div>
 
-        </motion.div>
+        </div>
 
       </div>
 
-      {/* Scroll */}
+      {/* Scroll Indicator */}
 
       <motion.div
         animate={{
@@ -74,13 +87,13 @@ export default function Hero() {
         }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center"
       >
-        <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+        <p className="text-[11px] uppercase tracking-[0.4em] text-white/60">
           Scroll
         </p>
 
-        <p className="mt-2 text-xl">
+        <div className="mt-3 text-xl">
           ↓
-        </p>
+        </div>
       </motion.div>
 
     </section>
