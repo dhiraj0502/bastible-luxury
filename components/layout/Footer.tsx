@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
 
             <h2 className="font-[var(--font-playfair)] text-4xl">
-              Loose Canon
+              Bastible
             </h2>
 
             <p className="mt-6 max-w-md text-white/60 leading-8">
